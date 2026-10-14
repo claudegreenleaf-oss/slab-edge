@@ -180,6 +180,8 @@ def main():
         except net.Blocked as e:
             errors.append(str(e))
             break
+        if checked % 25 == 0:
+            print(f"progress {checked} checked, {len(picks)} picks, {reasons}", flush=True)
         if pick:
             picks.append(pick)
             print(f"PICK +${pick['profit']:.0f} {pick['title']}", flush=True)

@@ -2,11 +2,14 @@
 import os
 import random
 import time
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutureTimeout
 
 from curl_cffi import requests
 
 PROXY = os.environ.get("CARDARB_PROXY", "socks5h://127.0.0.1:1088")
 _last = {}
+_pool = ThreadPoolExecutor(max_workers=8)
+HARD_TIMEOUT = 50  # a proxied connection can go silent past curl's own timeout
 
 
 class Blocked(Exception):
@@ -31,8 +34,9 @@ def get(s, url, host, gap=2.5, tries=3):
     for i in range(tries):
         polite(host, gap)
         try:
-            r = s.get(url, timeout=30)
-        except Exception:
+            r = _pool.submit(requests.get, url, impersonate="chrome", timeout=30,
+                             proxies={"http": PROXY, "https": PROXY}).result(timeout=HARD_TIMEOUT)
+        except (FutureTimeout, Exception):
             time.sleep(5 * (i + 1))
             continue
         if r.status_code == 200 and "Just a moment" not in r.text[:5000]:
