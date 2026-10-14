@@ -27,10 +27,10 @@ def listings(s, graders, grades, lo, hi, max_ratio):
     flt = ('(marketplace:"FIXED") AND (status:"Live") AND (subCategory1:"Sports Cards > Football") '
            f"AND ({gf}) AND (NOT visibility:internal)")
     seen = set()
-    bands = [lo, 50, 100, 200, 400, 800, 1600, hi]
+    bands = [lo, 35, 50, 75, 100, 150, 200, 300, 400, 600, 800, 1200, 1600, 2500, hi]
     bands = [b for b in bands if lo <= b <= hi]
     for a, b in zip(bands, bands[1:]):
-        for page in range(20):
+        for page in range(10):  # Algolia stops serving past hit 1000
             body = {"requests": [{
                 "indexName": INDEX, "query": "", "hitsPerPage": 100, "page": page,
                 "filters": flt,
@@ -39,7 +39,9 @@ def listings(s, graders, grades, lo, hi, max_ratio):
             }]}
             net.polite("algolia", 1.0)
             r = s.post(ALGOLIA, json=body, headers=headers, timeout=30)
-            r.raise_for_status()
+            if r.status_code != 200:
+                print(f"fanatics search {r.status_code} at ${a}-{b} page {page}: {r.text[:200]}", flush=True)
+                break
             res = r.json()["results"][0]
             for h in res["hits"]:
                 if h["listingId"] in seen:
