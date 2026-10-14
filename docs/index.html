@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slab Edge</title>
+<meta name="description" content="Graded football cards listed below what the identical card keeps selling for, after every fee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f0eb; --ink:#121212; --mute:#6b6862; --line:#d9d5cc; --card:#fbfaf7;
+  --accent:#1d5c3f; --accent-ink:#f2f0eb; --warn:#9a3b1c;
+  --serif:"Instrument Serif",Georgia,serif; --sans:"Inter Tight",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f0f0e; --ink:#efece6; --mute:#8d8a83; --line:#2a2926; --card:#161614; --accent:#7fd3a4; --accent-ink:#0f0f0e; --warn:#f08a62;
+}}
+:root[data-theme="dark"]{--bg:#0f0f0e; --ink:#efece6; --mute:#8d8a83; --line:#2a2926; --card:#161614; --accent:#7fd3a4; --accent-ink:#0f0f0e; --warn:#f08a62}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.mark{font-weight:600;letter-spacing:.14em}
+.mark i{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:20px;font-weight:400;margin-left:2px}
+.live{display:flex;gap:10px;align-items:center;color:var(--mute)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero{padding:clamp(56px,11vw,140px) 0 clamp(40px,7vw,90px)}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:28px}
+h1{font:400 clamp(52px,10.5vw,168px)/.9 var(--serif);letter-spacing:-.025em;max-width:12ch}
+h1 em{color:var(--accent)}
+.lede{max-width:44ch;margin-top:36px;font-size:clamp(17px,1.6vw,21px);color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.stat{padding:22px 0 26px;border-right:1px solid var(--line);padding-left:20px}
+.stat:first-child{padding-left:0}.stat:last-child{border-right:0}
+.stat b{display:block;font:400 clamp(34px,4.4vw,60px)/1 var(--serif)}
+.stat span{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+section{padding:clamp(56px,8vw,110px) 0 0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:14px;margin-bottom:8px}
+h2{font:400 clamp(30px,4vw,52px)/1 var(--serif);letter-spacing:-.01em}
+.sec-head small{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.pick{display:grid;grid-template-columns:76px 132px 1fr auto;gap:clamp(16px,2.6vw,36px);padding:34px 0;border-bottom:1px solid var(--line);align-items:start}
+.idx{font:400 54px/.85 var(--serif);color:var(--mute)}
+.thumb{width:132px;aspect-ratio:3/5;background:var(--card);border:1px solid var(--line);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.pick:hover .thumb img{transform:scale(1.04)}
+.grade{display:inline-block;font:500 11px/1 var(--mono);letter-spacing:.08em;border:1px solid var(--ink);padding:6px 8px;margin-bottom:14px}
+.ptitle{font:400 clamp(24px,2.5vw,34px)/1.08 var(--serif);max-width:28ch}
+.prod{color:var(--mute);font-size:14px;margin-top:8px}
+.nums{display:grid;grid-template-columns:repeat(3,auto);gap:10px 28px;margin-top:22px;max-width:520px}
+.nums div span{display:block;font:500 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.nums div b{font:500 17px/1 var(--mono)}
+.spark{margin-top:22px;max-width:520px}
+.spark svg{width:100%;height:46px;display:block;overflow:visible}
+.spark .lbl{display:flex;justify-content:space-between;font:400 11px/1 var(--mono);color:var(--mute);margin-top:6px}
+.profit{text-align:right;min-width:190px}
+.profit .big{font:400 clamp(44px,5.2vw,76px)/.9 var(--serif);color:var(--accent);letter-spacing:-.02em}
+.profit .roi{font:500 13px/1 var(--mono);margin:10px 0 24px;color:var(--mute)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);text-decoration:none;font:500 13px/1 var(--sans);letter-spacing:.02em;padding:15px 20px;border-radius:999px;transition:background .25s,transform .25s}
+.btn:hover{background:var(--accent);color:var(--accent-ink);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.link{display:block;margin-top:14px;font:500 12px/1 var(--mono);color:var(--mute);text-decoration:none;letter-spacing:.04em}
+.link:hover{color:var(--ink)}
+.empty{padding:70px 0;border-bottom:1px solid var(--line)}
+.empty p{font:400 clamp(28px,3.4vw,44px)/1.1 var(--serif);max-width:24ch}
+.empty small{display:block;margin-top:18px;color:var(--mute);max-width:56ch}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.rule{padding:30px 28px 34px 0;border-bottom:1px solid var(--line)}
+.rule i{font:500 11px/1 var(--mono);color:var(--mute);letter-spacing:.1em;font-style:normal}
+.rule h3{font:400 28px/1.05 var(--serif);margin:14px 0 10px}
+.rule p{color:var(--mute);font-size:15px;max-width:34ch}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font:500 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);text-align:left;padding:14px 12px 14px 0;border-bottom:1px solid var(--line)}
+td{padding:16px 12px 16px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{font-family:var(--mono);white-space:nowrap}
+.pos{color:var(--accent)}.neg{color:var(--warn)}
+.tw{overflow-x:auto}
+footer{padding:90px 0 60px;color:var(--mute);font-size:13px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer p{max-width:62ch}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.dot{animation:none}}
+@media (max-width:860px){
+  .pick{grid-template-columns:96px 1fr;}
+  .idx{display:none}
+  .thumb{width:96px}
+  .profit{grid-column:1/-1;text-align:left;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .profit .roi{margin:0}
+  .rules{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}.stat:nth-child(3){padding-left:0}
+  .nums{grid-template-columns:repeat(2,auto)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="mark">Slab<i>edge</i></div>
+    <div class="live"><span class="dot"></span><span id="updated">Loading</span></div>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">Graded football cards · bought under the floor</div>
+    <h1 id="headline">Reading the market.</h1>
+    <p class="lede">Each pick is a slab listed for less than the same card, in the same grade, has kept selling for on eBay. The profit shown assumes you resell at the low end of recent sales, after tax, shipping and eBay's cut.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b id="s-checked">0</b><span>Listings checked</span></div>
+    <div class="stat"><b id="s-picks">0</b><span>Passed every rule</span></div>
+    <div class="stat"><b id="s-tracked">0</b><span>Picks tracked</span></div>
+    <div class="stat"><b id="s-hit">n/a</b><span>Resold at a profit</span></div>
+  </div>
+
+  <section>
+    <div class="sec-head"><h2>Today's picks</h2><small>Ranked by profit at the floor</small></div>
+    <div id="picks"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>The bar</h2><small>Every pick clears all six</small></div>
+    <div class="rules" id="rules"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Track record</h2><small>Checked 14 days after each pick</small></div>
+    <div class="tw"><table>
+      <thead><tr><th>Card</th><th>Picked</th><th>All-in cost</th><th>Projected</th><th>Sold for since</th><th>Result</th></tr></thead>
+      <tbody id="history"></tbody>
+    </table></div>
+  </section>
+
+  <footer>
+    <p>Prices come from Fanatics Collect listings and eBay sales collected by SportsCardsPro. A pick means the numbers worked when the scan ran: prices move, listings sell, and a slab can turn up with a problem that a photo hid. Check the cert and the photos before you buy.</p>
+    <p>Scans every 30 minutes.</p>
+  </footer>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const money=n=>n==null?"n/a":"$"+Number(n).toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:0});
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function ago(iso){const m=Math.round((Date.now()-new Date(iso))/60000);if(m<1)return"just now";if(m<60)return m+" min ago";const h=Math.round(m/60);return h<48?h+" hr ago":Math.round(h/24)+" days ago"}
+function count(el,to){if(matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=to;return}const t0=performance.now();const f=t=>{const k=Math.min(1,(t-t0)/900);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
+function spark(sales,ask,floor){
+  const pts=[...sales].reverse();if(pts.length<2)return"";
+  const xs=pts.map(p=>+new Date(p.date)),ys=pts.map(p=>p.price);
+  const lo=Math.min(...ys,ask)*.92,hi=Math.max(...ys)*1.04,x0=Math.min(...xs),x1=Math.max(...xs)||x0+1;
+  const X=x=>((x-x0)/((x1-x0)||1))*100,Y=y=>46-((y-lo)/((hi-lo)||1))*46;
+  const dots=pts.map((p,i)=>`<circle cx="${X(xs[i])}%" cy="${Y(ys[i])}" r="3" fill="var(--ink)"><title>${p.date}: ${money(p.price)}</title></circle>`).join("");
+  return `<div class="spark"><svg><line x1="0" x2="100%" y1="${Y(floor)}" y2="${Y(floor)}" stroke="var(--accent)" stroke-dasharray="3 4"/><line x1="0" x2="100%" y1="${Y(ask)}" y2="${Y(ask)}" stroke="var(--warn)"/>${dots}</svg>
+  <div class="lbl"><span>Recent eBay sales (dots), floor (green), asking price (red)</span><span>${pts[0].date.slice(5)} to ${pts.at(-1).date.slice(5)}</span></div></div>`;
+}
+function pickHTML(p,i){
+  return `<article class="pick reveal">
+    <div class="idx">${String(i+1).padStart(2,"0")}</div>
+    <a class="thumb" href="${esc(p.buy_url)}" target="_blank" rel="noopener">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy">`:""}</a>
+    <div>
+      <span class="grade">${esc(p.grade)}${p.cert?" · cert "+esc(p.cert):""}</span>
+      <div class="ptitle">${esc(p.title)}</div>
+      <div class="prod">${esc(p.product)}</div>
+      <div class="nums">
+        <div><span>Asking</span><b>${money(p.ask)}</b></div>
+        <div><span>All-in cost</span><b>${money(p.all_in_cost)}</b></div>
+        <div><span>Resale floor</span><b>${money(p.floor)}</b></div>
+        <div><span>Median sale</span><b>${money(p.median)}</b></div>
+        <div><span>Sales, ${RULES.window_days} days</span><b>${p.sales_n}</b></div>
+        <div><span>Profit at median</span><b>${money(p.profit_at_median)}</b></div>
+      </div>
+      ${spark(p.recent_sales,p.ask,p.floor)}
+    </div>
+    <div class="profit">
+      <div><div class="big">+${money(p.profit)}</div><div class="roi">${Math.round(p.roi*100)}% return at the floor</div></div>
+      <div><a class="btn" href="${esc(p.buy_url)}" target="_blank" rel="noopener">Buy on Fanatics Collect <span aria-hidden="true">↗</span></a>
+      <a class="link" href="${esc(p.comps_url)}" target="_blank" rel="noopener">See every sale ↗</a></div>
+    </div>
+  </article>`;
+}
+let RULES={};
+async function load(){
+  const [d,h]=await Promise.all([fetch("data/picks.json?"+Date.now()).then(r=>r.json()),fetch("data/history.json?"+Date.now()).then(r=>r.json()).catch(()=>({}))]);
+  RULES=d.rules;
+  $("#updated").textContent="Updated "+ago(d.updated);
+  const n=d.picks.length;
+  $("#headline").innerHTML=n?`${n} slab${n>1?"s":""} worth <em>buying</em> now.`:`Nothing clears the <em>bar</em> right now.`;
+  count($("#s-checked"),d.checked);count($("#s-picks"),n);
+  const hist=Object.values(h).sort((a,b)=>b.first_seen.localeCompare(a.first_seen));
+  count($("#s-tracked"),hist.length);
+  const done=hist.filter(x=>x.outcome);
+  $("#s-hit").textContent=done.length?Math.round(100*done.filter(x=>x.outcome.profit_after>0).length/done.length)+"%":"n/a";
+  $("#picks").innerHTML=n?d.picks.map(pickHTML).join(""):`<div class="empty"><p>No listing passes every rule this scan.</p><small>That is the system working. Cheap cards rarely survive tax, shipping and eBay fees at the low end of their sales, and real mispricings sell fast. Checked ${d.checked} listings.</small></div>`;
+  const r=d.rules;
+  const rules=[
+    ["Same card, same grade",`Matched to one exact card, set, parallel and serial numbering. If more than one product could fit, the listing is dropped.`],
+    ["A real market",`At least ${r.min_sales} sales of that exact card in that exact PSA grade in the last ${r.window_days} days.`],
+    ["Priced at the floor",`Resale is assumed at the ${Math.round(r.floor_pct*100)}th percentile of those sales, not the average.`],
+    ["Every cost counted",`${(r.tax*100).toFixed(2)}% sales tax, ${money(r.ship_in)} shipping in, ${(r.ebay_fee*100).toFixed(2)}% eBay fee plus 40 cents, ${money(r.ship_out)} to ship it out.`],
+    ["Real profit",`At least ${money(r.min_profit)} and ${Math.round(r.min_roi*100)}% back on your all-in cost, at the floor price.`],
+    ["No traps",`Rejected if prices are falling, if the ask is suspiciously far below market, if a second price source disagrees, or if the slab has a qualifier.`],
+  ];
+  $("#rules").innerHTML=rules.map((x,i)=>`<div class="rule reveal"><i>${String(i+1).padStart(2,"0")}</i><h3>${x[0]}</h3><p>${x[1]}</p></div>`).join("");
+  $("#history").innerHTML=hist.length?hist.slice(0,60).map(x=>{const o=x.outcome;return `<tr>
+    <td><a href="${esc(x.buy_url)}" target="_blank" rel="noopener">${esc(x.title)}</a></td>
+    <td class="n">${x.first_seen.slice(0,10)}</td><td class="n">${money(x.all_in_cost)}</td><td class="n pos">+${money(x.profit)}</td>
+    <td class="n">${o?money(o.median_after)+" ("+o.sales_after+")":"pending"}</td>
+    <td class="n ${o?(o.profit_after>0?"pos":"neg"):""}">${o?(o.profit_after>0?"+":"")+money(o.profit_after):(x.status==="gone"?"sold out":"live")}</td></tr>`}).join(""):`<tr><td colspan="6" style="color:var(--mute)">No picks yet.</td></tr>`;
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+}
+load().catch(e=>{$("#updated").textContent="Data unavailable";console.error(e)});
+setInterval(load,5*60*1000);
+</script>
+</body>
+</html>

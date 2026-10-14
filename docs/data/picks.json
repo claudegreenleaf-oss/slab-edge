@@ -1,0 +1,1 @@
+{"updated":"2026-10-13T19:00:00Z","checked":0,"rejected":{},"errors":[],"picks":[],"rules":{"window_days":60,"min_sales":6,"floor_pct":0.2,"min_profit":20,"min_roi":0.2,"tax":0.09375,"ship_in":10,"ebay_fee":0.1325,"ship_out":6}}

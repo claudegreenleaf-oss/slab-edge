@@ -1,0 +1,10 @@
+[Unit]
+Description=Slab Edge scan and publish
+Requires=cardarb-tunnel.service
+After=cardarb-tunnel.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/cardarb
+ExecStart=%h/cardarb/deploy/run.sh
+TimeoutStartSec=3h
