@@ -21,7 +21,6 @@ def listings(s, graders, grades, lo, hi, max_ratio):
 
     Algolia caps a query at 1000 hits, so the price range is walked in bands.
     """
-    headers = {**ORIGIN, "x-algolia-api-key": _key(s), "x-algolia-application-id": APP_ID}
     gf = " OR ".join(f'gradingService:"{g}"' for g in graders)
     gr = [f"grade={g}" for g in grades]
     flt = ('(marketplace:"FIXED") AND (status:"Live") AND (subCategory1:"Sports Cards > Football") '
@@ -30,6 +29,8 @@ def listings(s, graders, grades, lo, hi, max_ratio):
     bands = [lo, 35, 50, 75, 100, 150, 200, 300, 400, 600, 800, 1200, 1600, 2500, hi]
     bands = [b for b in bands if lo <= b <= hi]
     for a, b in zip(bands, bands[1:]):
+        # The search key expires within the hour and a full scan runs longer, so refresh per band.
+        headers = {**ORIGIN, "x-algolia-api-key": _key(s), "x-algolia-application-id": APP_ID}
         for page in range(10):  # Algolia stops serving past hit 1000
             body = {"requests": [{
                 "indexName": INDEX, "query": "", "hitsPerPage": 100, "page": page,
