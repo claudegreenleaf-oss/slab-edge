@@ -1,19 +1,19 @@
 {
- "updated": "2026-10-22T07:58:25.459223+00:00",
- "checked": 2347,
+ "updated": "2026-10-22T08:29:21.967064+00:00",
+ "checked": 2264,
  "rejected": {
-  "cannot clear the bar": 1263,
-  "thin market (0 sales)": 128,
-  "no exact product match": 791,
-  "margin too small": 50,
+  "cannot clear the bar": 1221,
+  "thin market (0 sales)": 124,
+  "no exact product match": 757,
+  "margin too small": 49,
   "sources disagree": 19,
   "thin market (1 sales)": 24,
   "thin market (4 sales)": 10,
-  "thin market (3 sales)": 9,
+  "thin market (3 sales)": 8,
   "thin market (5 sales)": 8,
   "falling price": 5,
   "thin market (2 sales)": 15,
-  "qualified grade": 25
+  "qualified grade": 24
  },
  "errors": [],
  "picks": [],
