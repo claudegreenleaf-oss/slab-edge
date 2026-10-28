@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-28T00:22:39.441565+00:00",
- "checked": 2052,
+ "updated": "2026-10-28T00:54:00.687692+00:00",
+ "checked": 2048,
  "rejected": {
-  "cannot clear the bar": 1041,
-  "thin market (0 sales)": 117,
-  "no exact product match": 720,
-  "thin market (1 sales)": 21,
+  "cannot clear the bar": 1034,
+  "thin market (0 sales)": 115,
+  "no exact product match": 723,
+  "thin market (1 sales)": 23,
   "sources disagree": 21,
   "thin market (2 sales)": 20,
   "margin too small": 67,
