@@ -1,20 +1,15 @@
 {
- "updated": "2026-11-02T16:08:15.374308+00:00",
- "checked": 576,
+ "updated": "2026-11-02T16:41:31.175893+00:00",
+ "checked": 146,
  "rejected": {
-  "cannot clear the bar": 413,
-  "thin market (0 sales)": 36,
-  "no exact product match": 85,
-  "falling price": 6,
-  "thin market (1 sales)": 5,
-  "sources disagree": 17,
-  "margin too small": 4,
-  "thin market (2 sales)": 5,
-  "thin market (4 sales)": 3,
-  "thin market (3 sales)": 1
+  "cannot clear the bar": 136,
+  "thin market (0 sales)": 3,
+  "no exact product match": 4,
+  "falling price": 1,
+  "thin market (1 sales)": 1
  },
  "errors": [
-  "www.sportscardspro.com refused https://www.sportscardspro.com/search-products?q=2025+Panini+Prizm+White+Ashton+Jeanty+ROOKIE+%2F35+%23315&type=prices"
+  "www.sportscardspro.com refused https://www.sportscardspro.com/search-products?q=1998+Black+Diamond+Single+Randy+Moss+ROOKIE+%2397&type=prices"
  ],
  "picks": [],
  "rules": {
