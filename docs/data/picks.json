@@ -1,12 +1,21 @@
 {
- "updated": "2026-11-03T20:49:51.460728+00:00",
- "checked": 34,
+ "updated": "2026-11-03T21:22:55.919628+00:00",
+ "checked": 1988,
  "rejected": {
-  "cannot clear the bar": 33
+  "cannot clear the bar": 1129,
+  "no exact product match": 574,
+  "thin market (0 sales)": 110,
+  "falling price": 12,
+  "thin market (1 sales)": 28,
+  "sources disagree": 19,
+  "margin too small": 60,
+  "thin market (4 sales)": 12,
+  "thin market (2 sales)": 21,
+  "thin market (3 sales)": 7,
+  "qualified grade": 14,
+  "thin market (5 sales)": 2
  },
- "errors": [
-  "www.sportscardspro.com refused https://www.sportscardspro.com/search-products?q=2023+Panini+Select+D.+Thompson-Robinson+%23134+Silver+Prizm&type=prices"
- ],
+ "errors": [],
  "picks": [],
  "rules": {
   "window_days": 60,
