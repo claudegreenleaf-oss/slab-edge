@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-03T03:10:31.863695+00:00",
- "checked": 50,
+ "updated": "2026-11-03T03:43:36.394156+00:00",
+ "checked": 49,
  "rejected": {
-  "cannot clear the bar": 46,
+  "cannot clear the bar": 45,
   "thin market (0 sales)": 1,
   "no exact product match": 2
  },
