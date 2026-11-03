@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-03T07:35:15.135893+00:00",
- "checked": 47,
+ "updated": "2026-11-03T08:08:20.094668+00:00",
+ "checked": 111,
  "rejected": {
-  "cannot clear the bar": 43,
-  "thin market (0 sales)": 1,
-  "no exact product match": 2
+  "cannot clear the bar": 102,
+  "thin market (0 sales)": 3,
+  "no exact product match": 5
  },
  "errors": [
-  "www.sportscardspro.com refused https://www.sportscardspro.com/search-products?q=2021+Pokemon+SWSH+Celebrations+Classic+Collection+Holo+Blastoise+%232&type=prices"
+  "www.sportscardspro.com refused https://www.sportscardspro.com/search-products?q=2020+Panini+Obsidian+Michael+Pittman+Jr.+ROOKIE+%23114&type=prices"
  ],
  "picks": [],
  "rules": {
