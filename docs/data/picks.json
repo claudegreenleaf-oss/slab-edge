@@ -1,13 +1,11 @@
 {
- "updated": "2026-11-03T16:58:16.888320+00:00",
- "checked": 112,
+ "updated": "2026-11-03T17:31:25.413697+00:00",
+ "checked": 34,
  "rejected": {
-  "cannot clear the bar": 103,
-  "thin market (0 sales)": 3,
-  "no exact product match": 5
+  "cannot clear the bar": 33
  },
  "errors": [
-  "www.sportscardspro.com refused https://www.sportscardspro.com/search-products?q=2020+Panini+Obsidian+Michael+Pittman+Jr.+ROOKIE+%23114&type=prices"
+  "www.sportscardspro.com refused https://www.sportscardspro.com/search-products?q=2023+Panini+Select+D.+Thompson-Robinson+%23134+Silver+Prizm&type=prices"
  ],
  "picks": [],
  "rules": {
