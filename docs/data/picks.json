@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-11T20:55:46.386315+00:00",
- "checked": 2217,
+ "updated": "2026-11-11T21:26:39.353674+00:00",
+ "checked": 2221,
  "rejected": {
-  "cannot clear the bar": 1271,
+  "cannot clear the bar": 1276,
   "no exact product match": 639,
   "thin market (0 sales)": 118,
   "thin market (1 sales)": 34,
@@ -13,7 +13,7 @@
   "thin market (2 sales)": 18,
   "thin market (4 sales)": 5,
   "thin market (5 sales)": 10,
-  "qualified grade": 16
+  "qualified grade": 15
  },
  "errors": [],
  "picks": [
