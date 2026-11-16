@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-16T14:07:17.305124+00:00",
- "checked": 2141,
+ "updated": "2026-11-16T14:38:02.611279+00:00",
+ "checked": 2137,
  "rejected": {
-  "cannot clear the bar": 1290,
-  "no exact product match": 594,
-  "thin market (0 sales)": 115,
+  "cannot clear the bar": 1291,
+  "no exact product match": 590,
+  "thin market (0 sales)": 114,
   "sources disagree": 18,
   "falling price": 10,
   "thin market (2 sales)": 11,
