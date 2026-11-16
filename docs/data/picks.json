@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-16T07:23:13.615372+00:00",
+ "updated": "2026-11-16T07:54:02.622865+00:00",
  "checked": 2140,
  "rejected": {
-  "cannot clear the bar": 1285,
-  "no exact product match": 597,
+  "cannot clear the bar": 1287,
+  "no exact product match": 595,
   "thin market (0 sales)": 118,
   "thin market (5 sales)": 3,
   "sources disagree": 19,
@@ -28,15 +28,25 @@
    "comps_url": "https://www.sportscardspro.com/game/football-cards-1984-topps/dan-marino-123",
    "ask": 349.0,
    "all_in_cost": 391.72,
-   "floor": 554.6,
+   "floor": 561.2,
    "median": 599.99,
    "low": 132.5,
    "sales_n": 23,
    "fanatics_guide": 399.96,
-   "profit": 83.0,
-   "roi": 0.212,
+   "profit": 88.73,
+   "roi": 0.227,
    "profit_at_median": 122.37,
    "recent_sales": [
+    {
+     "date": "2026-11-16",
+     "price": 543.0,
+     "url": "https://www.ebay.com/itm/840098620142"
+    },
+    {
+     "date": "2026-11-15",
+     "price": 561.0,
+     "url": "https://www.ebay.com/itm/820347901470"
+    },
     {
      "date": "2026-11-14",
      "price": 625.0,
@@ -86,16 +96,6 @@
      "date": "2026-10-23",
      "price": 696.0,
      "url": "https://www.ebay.com/itm/168802416430"
-    },
-    {
-     "date": "2026-10-20",
-     "price": 599.99,
-     "url": "https://www.ebay.com/itm/147637812063"
-    },
-    {
-     "date": "2026-10-20",
-     "price": 533.0,
-     "url": "https://www.ebay.com/itm/168783851783"
     }
    ],
    "allow_offers": false,
