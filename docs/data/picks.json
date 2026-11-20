@@ -1,107 +1,22 @@
 {
- "updated": "2026-11-20T10:18:24.586783+00:00",
- "checked": 2293,
+ "updated": "2026-11-20T10:49:44.631462+00:00",
+ "checked": 2234,
  "rejected": {
-  "cannot clear the bar": 1371,
-  "no exact product match": 655,
+  "cannot clear the bar": 1342,
+  "no exact product match": 630,
   "thin market (0 sales)": 121,
   "qualified grade": 21,
   "sources disagree": 18,
   "thin market (2 sales)": 11,
   "thin market (5 sales)": 4,
-  "thin market (4 sales)": 5,
+  "thin market (4 sales)": 4,
   "thin market (3 sales)": 12,
-  "thin market (1 sales)": 23,
-  "margin too small": 41,
-  "falling price": 10
+  "thin market (1 sales)": 22,
+  "margin too small": 40,
+  "falling price": 9
  },
  "errors": [],
- "picks": [
-  {
-   "id": "d144a58f-d06e-4672-a06f-948fa6811c8b",
-   "title": "1984 Topps Football Dan Marino ROOKIE #123 PSA 8.5 NM-MT+",
-   "product": "Dan Marino #123 [Rookie] \u00b7 1984 Topps",
-   "grade": "PSA 9",
-   "cert": "86437722",
-   "image": "https://cdn-vault.fanaticscollect.com/2026/7/2/wr/10/small/v5236200_2021070110002130R_33.jpg",
-   "buy_url": "https://www.fanaticscollect.com/buy-now/d144a58f-d06e-4672-a06f-948fa6811c8b/1984-topps-football-dan-marino-rookie-123-psa-8-5-nm-mt",
-   "comps_url": "https://www.sportscardspro.com/game/football-cards-1984-topps/dan-marino-123",
-   "ask": 349.0,
-   "all_in_cost": 391.72,
-   "floor": 563.21,
-   "median": 599.5,
-   "low": 533.0,
-   "sales_n": 22,
-   "fanatics_guide": 399.96,
-   "profit": 90.47,
-   "roi": 0.231,
-   "profit_at_median": 121.94,
-   "recent_sales": [
-    {
-     "date": "2026-11-16",
-     "price": 599.0,
-     "url": "https://www.ebay.com/itm/137449513795"
-    },
-    {
-     "date": "2026-11-16",
-     "price": 543.0,
-     "url": "https://www.ebay.com/itm/840098620142"
-    },
-    {
-     "date": "2026-11-15",
-     "price": 561.0,
-     "url": "https://www.ebay.com/itm/820347901470"
-    },
-    {
-     "date": "2026-11-14",
-     "price": 625.0,
-     "url": "https://www.ebay.com/itm/147668158128"
-    },
-    {
-     "date": "2026-11-05",
-     "price": 624.99,
-     "url": "https://www.ebay.com/itm/960130342886"
-    },
-    {
-     "date": "2026-11-04",
-     "price": 610.0,
-     "url": "https://www.ebay.com/itm/267827596987"
-    },
-    {
-     "date": "2026-11-04",
-     "price": 570.01,
-     "url": "https://www.ebay.com/itm/128162894905"
-    },
-    {
-     "date": "2026-10-30",
-     "price": 702.0,
-     "url": "https://www.ebay.com/itm/366753198573"
-    },
-    {
-     "date": "2026-10-28",
-     "price": 582.5,
-     "url": "https://www.ebay.com/itm/307250646954"
-    },
-    {
-     "date": "2026-10-27",
-     "price": 550.0,
-     "url": "https://www.ebay.com/itm/257818217190"
-    },
-    {
-     "date": "2026-10-25",
-     "price": 600.0,
-     "url": "https://www.ebay.com/itm/820274237895"
-    },
-    {
-     "date": "2026-10-25",
-     "price": 598.51,
-     "url": "https://www.ebay.com/itm/820266573176"
-    }
-   ],
-   "allow_offers": false,
-   "first_seen": "2026-11-07T23:10:24.947402+00:00"
-  }
- ],
+ "picks": [],
  "rules": {
   "window_days": 60,
   "min_sales": 6,
