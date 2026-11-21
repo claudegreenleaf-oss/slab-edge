@@ -83,12 +83,13 @@
   "allow_offers": false,
   "first_seen": "2026-11-07T23:10:24.947402+00:00",
   "last_seen": "2026-11-21T17:32:33.365358+00:00",
-  "status": "live",
+  "status": "gone",
   "outcome": {
    "checked": "2026-11-21",
    "sales_after": 4,
    "median_after": 580.0,
    "profit_after": 105.03
-  }
+  },
+  "gone_at": "2026-11-21T18:03:48.842028+00:00"
  }
 }
