@@ -82,7 +82,13 @@
   ],
   "allow_offers": false,
   "first_seen": "2026-11-07T23:10:24.947402+00:00",
-  "last_seen": "2026-11-20T23:51:06.097159+00:00",
-  "status": "live"
+  "last_seen": "2026-11-21T00:21:51.084551+00:00",
+  "status": "live",
+  "outcome": {
+   "checked": "2026-11-21",
+   "sales_after": 4,
+   "median_after": 580.0,
+   "profit_after": 105.03
+  }
  }
 }
