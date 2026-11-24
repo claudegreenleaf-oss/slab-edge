@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-24T03:23:42.571866+00:00",
- "checked": 2384,
+ "updated": "2026-11-24T03:54:45.337769+00:00",
+ "checked": 2381,
  "rejected": {
-  "cannot clear the bar": 1390,
-  "no exact product match": 717,
+  "cannot clear the bar": 1388,
+  "no exact product match": 716,
   "thin market (0 sales)": 126,
   "qualified grade": 29,
   "sources disagree": 18,
